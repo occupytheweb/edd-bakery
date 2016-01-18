@@ -1,2 +1,4 @@
 # edd-bakery
-edd-bakery: stock tracking website
+edd-bakery: repo
+
+*initial commit*
