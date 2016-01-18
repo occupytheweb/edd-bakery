@@ -1,0 +1,176 @@
+
+
+header {
+    height: 190px;
+    font-family: 'Pacifico', cursive
+}
+
+footer {
+	text-align: center;
+}
+
+h1, h2, h3 {
+	font-family: 'Pacifico',cursive;
+    line-height: 1.1;
+    color: inherit;
+    font-weight: 400;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-size: 36px;
+    color: #f47795;
+}
+
+.navbar-header {
+	width: 165px;
+	height: 180px;
+}
+
+div.nav-menu > .nav{
+	margin-left: 90px;
+}
+
+#placeholder_welcome {
+	width: 360px;
+	height: 380px;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.jumbotron {
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.5;
+	text-align: center;
+	text-shadow: 1px 1px 1px #585a5c;
+}
+
+.jumbotron h1 {
+	font-size: 80px;
+	font-weight: 400;
+}
+
+#tagline{
+  padding-top: 207px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 207px;
+  background: url(../res/home-bg.jpg) 50% 0 fixed no-repeat;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+
+#placeholder_rw1{
+	background-color: #f5c2ca;
+	padding-top: 207px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 207px;
+}
+
+
+#placeholder_rw2{
+	background-color: #e8e8e8;
+	padding-top: 50px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 50px;
+	width: 100%;
+}
+
+.container{
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#textContent a:link,
+#textContent a:visited {
+    color: #f47795
+}
+
+#textContent a:hover {
+    color: #585a5b
+}
+
+a {
+	text-decoration: none;
+}
+
+header a {
+	padding-top: 10px;
+	padding-left: 26px;
+	padding-right: 26px;
+	padding-bottom: 10px;
+	font-size: 24px;
+}
+
+header a:link,
+header a:visited {
+    color: #585a5c
+}
+
+header a:hover {
+    color: #f47795
+}
+
+header #contact {
+	width: 380px;
+	height: 61px;
+}
+
+
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.hidden {
+  display: none !important;
+}
+.affix {
+  position: fixed;
+}
