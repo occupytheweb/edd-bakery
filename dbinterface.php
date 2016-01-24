@@ -33,7 +33,13 @@ Class PDO_h extends \PDO {
 		    restore_exception_handler();
 		}
 
-		
+		public function pull($arg, &$result) {
+				$stmt = $this->prepare('SELECT :arg FROM ' . $this->data_route);
+				$stmt->bindParam(':arg', $arg);
+				$stmt->execute();
+				$record = $stmt->fetch();
+				return $record;
+		}
 
 }
 }
