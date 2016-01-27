@@ -20,7 +20,7 @@ namespace dbinterface {
         "users" => array("UserID", "FirstName", "LastName", "Username", "Password"),
       ];
 
-      private $DSN = 'mysql:host=127.0.0.1;dbname =';
+      private $DSN = 'mysql:host=127.0.0.1;dbname=';
       private $data_route;
 
       public static function exception_handler($exception) {
@@ -41,17 +41,8 @@ namespace dbinterface {
           restore_exception_handler();
       }
 
-      public function pull($arg, &$result, $fieldset = "*") {
-          $fieldset = self::resolve_field($fieldset);
-          $stmt = $this->prepare('SELECT ' . $fieldset . ' FROM ' . $this->data_route);
-          //$stmt->bindParam(':arg', $arg);
-          $stmt->execute();
-          $record = $stmt->fetch();
-          return $record;
-      }
-
       private function resolve_field($indexes) {
-          if(!($indexes == "*")) {
+          if( !($indexes == "*") ) {
               $fields = "";
               foreach( explode(" ", $indexes)  as $thisIndex ) {
                   $fields .= static::$data_source_fieldset[ array_search($this->data_route, static::$data_sources) ][ $thisIndex ] . ",";
@@ -64,9 +55,37 @@ namespace dbinterface {
           return $fields;
       }
 
-  }
-}
+      private function resolve_condition($conditionArray) {
+          $condition = "";
+          if( !(empty($conditionArray)) ) {
+              $condition = " WHERE";
+              foreach ($conditionArray as $key => $value) {
+                  $condition .= " $key=?";
+              }
+          }
+          return $condition;
+      }
 
-namespace {
-  $dbh = new dbinterface\PDO_handle();
+      private function apply_binds($statement, $conditionArray) {
+          if( !(empty($conditionArray)) ) {
+              $i = 0;
+              foreach ($conditionArray as $value) {
+                  $i++;
+                  $statement->bindValue($i, $value);
+              }
+          }
+      }
+
+      public function pull($fieldset = "*", $conditionArray = [], &$result = null) {
+          $fieldset = self::resolve_field($fieldset);
+          $conditions = self::resolve_condition($conditionArray);
+          $stmt = $this->prepare('SELECT ' . $fieldset . ' FROM ' . $this->data_route . $conditions);
+          self::apply_binds($stmt, $conditionArray);
+          $stmt->execute();
+          $record = $stmt->fetchAll(\PDO::FETCH_BOTH);
+          $result = count($record);
+          return $record;
+      }
+
+  }
 }
