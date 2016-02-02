@@ -14,10 +14,12 @@ namespace dbinterface {
 
       private static $data_sources = [
         "users" => "edd.users_tbl",
+        "store-cakes" => "edd.store_cakes_tbl",
       ];
 
       private static $data_source_fieldset = [
         "users" => array("UserID", "FirstName", "LastName", "Username", "Password"),
+        "store-cakes" => array("ID", "Name", "Price", "ImageBasePath", "Details"),
       ];
 
       private $DSN = 'mysql:host=127.0.0.1;dbname=';
@@ -76,6 +78,20 @@ namespace dbinterface {
           }
       }
 
+      /**
+       * sets the source database table
+       * @param $target  the (unqualified) name of the table  As String
+       */
+      public function set_target($target) {
+          $this->data_route = static::$data_sources[$target];
+      }
+
+      /**
+       * pulls a resultset from the data source
+       * @param  $fieldset       a space-delimited string of the indexes of the columns to return
+       * @param  $conditionArray column-value key-value pairs as an assoc array
+       * @return $record         record(s) retuned from the query as assoc & indexed array
+       */
       public function pull($fieldset = "*", $conditionArray = [], &$result = null) {
           $fieldset = self::resolve_field($fieldset);
           $conditions = self::resolve_condition($conditionArray);
@@ -86,6 +102,6 @@ namespace dbinterface {
           $result = count($record);
           return $record;
       }
-
   }
+
 }
