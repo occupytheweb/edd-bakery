@@ -1,6 +1,13 @@
 <?php
 ?>
-<header class="navbar" role="navigation">
+<head> <! -- added the head part -->
+	  <meta charset="utf-8" />
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+	  <title>EdD Bakery and Pastry Shop</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+	  <header class="navbar" role="navigation">
   <div class="container">
     <div class="navbar-header">
 
