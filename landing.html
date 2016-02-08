@@ -32,15 +32,15 @@
 	</head>
 
 	<body>
-
 		<div class="page-content">
-
 			<header class="navbar" role="navigation">
+				<div id="bg">
+		    </div>
 
 			  <div class="container">
 			    <div class="navbar-header">
 
-			      <a id=="navbar-brand" href="/">
+			      <a id="nav-logo" href="/">
 			        <!-- edd logo -->
 			      </a>
 		        </div><!-- ./navbar-header -->
@@ -49,14 +49,14 @@
 
 		      </div>
 
-		      <div class="nav-menu">
+		      <nav class="nav-menu">
 		        <ul class="nav navbar-nav">
 		          <li>
-		          	<a href="/">Home</a>
+		          	<a href="">Home</a>
 		          </li>
 
 		          <li class="dropdown">
-		          	<a href="#" class="dropdown-toggle">
+		          	<a class="dropdown-toggle">
 		          		Cakes
 		          		<span class="glyphicon glyphicon-menu-down"></span>
 		          	</a>
@@ -85,7 +85,7 @@
 		          </li>
 
 		          <li>
-		          	<a href="#">Prices & Portions</a>
+		          	<a href="#">Store</a>
 		          </li>
 
 		          <li>
@@ -102,8 +102,8 @@
 	          </ul>
 
 	          <ul class="nav navbar-nav navbar-right">
-		          <li class="nav-login dropdown">
-		          	<a href="#">Login</a>
+		          <li class="nav-login dropdown" id="login">
+		          	<a>Login</a>
 
 		          	<ul class="dropdown-menu">
 			          	<li>
@@ -118,10 +118,10 @@
 			          		<button type="button">Register</button>
 			          		<button type="button">Login</button>
 			          	</li>
-					</ul><!-- /.dropdown-menu -->
+				        </ul><!-- /.dropdown-menu -->
 		          </li><!-- /.nav-login -->
 	          </ul><!-- /.nav navbar-nav navbar-right dropdown -->
-          </div><!-- /.nav-menu -->
+          </nav><!-- /.nav-menu -->
         </div><!-- /.container -->
       </header><!-- /.navbar -->
 
@@ -141,11 +141,11 @@
 					Epi de Dieu can create cakes for:
 					</p>
 					<ul>
-					<li>Weddings</li>
-					<li>Birthdays</li>
-					<li>Christenings</li>
-					<li>Corporate events</li>
-					<li>Special occasions</li>
+						<li>Weddings</li>
+						<li>Birthdays</li>
+						<li>Christenings</li>
+						<li>Corporate events</li>
+						<li>Special occasions</li>
 					</ul>
 					<p>
 					Whether you want a five tier wedding cake for your special day, a unique birthday cake for a one to one hundred year old, corporate cupcakes for a launch event, or you just fancy some cupcakes for the weekend. Epi de Dieu can create a special memorable cake just for you.
@@ -204,24 +204,41 @@
 			</section>
 
 
+				<footer>
+					<div class="col-sm-12">
+				  	<div class="col-md-offset-2 col-md-3">
 
-				<div class="vcard">
-					<h4 class="coral"><a href="contact/">Contact <span class="fn org">Epi de Dieu Ltd</span></a></h4>
-					<p class="tel">465 1001</p>
+						</div>
 
-					<div class="adr">
-						<p>
-							<span class="street-address">Rémi Ollier Street</span><br />
-							<span class="locality">Quatre-Bornes</span>, <span class="region">PW</span>, <span class="postal-code">0000</span>
-						</p>
+						<div class="col-md-offset-0 col-md-3">
+
+						</div>
+
+
+
+						<div class="col-md-offset-0 col-md-3">
+							<div class="vcard">
+								<h4 class="coral"><a href="contact/">Contact <span class="fn org">Epi de Dieu Ltd</span></a></h4>
+								<p class="tel">465 1001</p>
+
+								<div class="adr">
+									<p>
+										<span class="street-address">Rémi Ollier Street</span><br />
+										<span class="locality">Quatre-Bornes</span>, <span class="region">PW</span>, <span class="postal-code">0000</span>
+									</p>
+								</div>
+
+								<p><span class="tel"><span class="type">F<span class="d">ax</span></span>: <span class="value">(+230) 465 1001</span></span></p>
+								<p class="e">E<span class="d">mail</span>: <a href="&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#64; &#108;&#111;&#99;&#97;&#108;&#104;&#111;&#115;&#116;" class="email that-thing"><span class="that-thing" style="unicode-bidi: bidi-override; direction: rtl;"> &#116;&#115;&#111;&#104;&#108;&#97;&#99;&#111;&#108;&#64;&#116;&#99;&#97;&#116;&#110;&#111;&#99; </span></a></p>
+							</div><!-- /.vcard -->
+						</div>
 					</div>
-
-					<p><span class="tel"><span class="type">F<span class="d">ax</span></span>: <span class="value">(+230) 465 1001</span></span></p>
-					<p class="e">E<span class="d">mail</span>: <a href="&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#64; &#108;&#111;&#99;&#97;&#108;&#104;&#111;&#115;&#116;" class="email that-thing"><span class="that-thing" style="unicode-bidi: bidi-override; direction: rtl;"> &#116;&#115;&#111;&#104;&#108;&#97;&#99;&#111;&#108;&#64;&#116;&#99;&#97;&#116;&#110;&#111;&#99; </span></a></p>
-				</div><!-- /.vcard -->
-
+					<div style="clear: both; height: 25px; width: 100%; bottom: 0px; background-image: url(res/ft.png);">
+					</div>
+				</footer>
 			</div><!-- /.wrapper.separator -->
 
 			<script type="text/javascript" src="handler.js"></script>
+			<!-- <script type="text/javascript" src="draw.js" async></script> -->
 		</body>
 	</html>
