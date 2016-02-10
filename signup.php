@@ -6,6 +6,14 @@
 <head>
 	<title>EdD Bakery and Pastry Shop</title>
 	<link rel="stylesheet" href="css/register.css" />
+	<link rel="stylesheet" href="css/register.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' />
+	<link rel="stylesheet" href="css/display.css" />
+	<link rel="stylesheet" href="css/typography.css" />
+	<link rel="stylesheet" href="css/nav.css" />
+	<link rel="stylesheet" href="css/grids.css" />
+	<link rel="stylesheet" href="css/glyphs.css" />
+	<link rel="stylesheet" href="css/dropdown.css" />
 </head>
 <body>
 <h1>Registration</h1>
