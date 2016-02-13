@@ -129,8 +129,8 @@ namespace dbinterface {
 
       /**
        * pushes a record to the data source
-       * @param $fieldset  a space-delimited string of the indexes of columns into which data is to be input
-       * @param $values    a space-delimited string of the values to push
+       * @param  $fieldset  a space-delimited string of the indexes of columns into which data is to be input
+       * @param  $values    a space-delimited string of the values to push
        * TODO::Overload inherited transaction methods
        */
       public function push($fieldset = "*", $values) {
@@ -141,6 +141,14 @@ namespace dbinterface {
           $this->beginTransaction();
           $stmt->execute();
           $this->commit();
+      }
+
+
+      /**
+       * closes the current instance of the database handle
+       */
+      public function drop() {
+          $this = null;
       }
   }
 }
