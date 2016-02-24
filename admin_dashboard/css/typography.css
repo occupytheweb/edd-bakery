@@ -1,0 +1,24 @@
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+nav a {
+  color: #999999;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav .nav-brand {
+  font-size: 18px;
+}
+
+#side-menu {
+  font-size: 14px;
+  text-indent: 20px;
+}
