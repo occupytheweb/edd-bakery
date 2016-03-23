@@ -4,7 +4,7 @@ namespace dbinterface {
 # Here be dragons.
 # Thou art forewarned.
 
-  class PDO_handle extends \PDO
+  class db_handle extends \PDO
   {
       private static $DB = [
         "name" => "edd",
@@ -141,14 +141,6 @@ namespace dbinterface {
           $this->beginTransaction();
           $stmt->execute();
           $this->commit();
-      }
-
-
-      /**
-       * closes the current instance of the database handle
-       */
-      public function drop() {
-          $this = null;
       }
   }
 }
