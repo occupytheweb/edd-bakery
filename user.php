@@ -16,4 +16,12 @@ class user
         $this->username  = $userData['Username' ];
         $this->cart      = null;
     }
+
+
+    public function __get($property) {
+        if(property_exists($this, $property)) {
+            return $this->$property;
+        }
+    }
+
 }
