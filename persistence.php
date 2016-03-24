@@ -17,7 +17,7 @@ class persistence
     }
 
 
-    public static function persist_user(user $thisUser) {
+    public static function persist_user(user $thisUser = null) {
         $_SESSION['user'] = $thisUser;
         self::pull();
     }
