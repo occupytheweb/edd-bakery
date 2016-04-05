@@ -1,13 +1,20 @@
-function selectedFrosting(){
-	if(document.getElementById('frosting').value==""){
-		document.getElementById('frostingIm').innerHtml="Please Choose a frosting";	
-	}
-	if(document.getElementById('frosting').value=="no_frost"){
-		document.getElementById('frostingIm').innerHtml = "No Frosting";	
-	}
-	if(document.getElementById('frosting').value=="choco_buttercream"){
-		document.getElementById('frostingIm').innerHtml = "Chocolate Buttercream";	
-	}
-	
-	
+"use strict";
+
+function selectedFrosting() {
+		var frostType     = document.getElementById('frosting').value;
+		var frostSelected = document.getElementById('frostingIm');
+		var msg           = "";
+
+		switch(frostType) {
+				case "no_frost":
+						msg = "No Frosting";
+						break;
+				case "choco_buttercream":
+						msg = "Chocolate Buttercream";
+						break;
+				default:
+						msg = "Please choose a frosting";
+		}
+
+		frostSelected.innerHTML = msg;
 }
