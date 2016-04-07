@@ -1,0 +1,28 @@
+.showcase {
+  list-style-type: none;
+}
+
+.store-item {
+  font-size: 15px;
+  
+  width: 291px;
+  height: 291px;
+  padding: 10px;
+  margin-bottom: 25px;
+  float: left;
+  border-image-slice: 100%;
+}
+
+.store-item div {
+  
+}
+
+.store-item img {
+  border-image-slice: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.store-item .hover_actions {
+  display: none;
+}
