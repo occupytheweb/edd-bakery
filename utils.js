@@ -37,11 +37,18 @@ var styles = {
     },
 
     toggle_class : function(element, cls) {
-        element.classList.contains(cls) ? element.classList.add(cls) : element.classList.remove(cls);
+        element.classList.contains(cls) ? element.classList.remove(cls) : element.classList.add(cls);
     }
 }
 
 
-function set_click_handler(element, callable) {
-    element.addEventListener("click", callable, false);
+function set_click_handler(element_s, callable) {
+    if (element_s.constructor === HTMLCollection) {
+        var i = element_s.length;
+        while(i--) {
+            element_s[i].addEventListener("click", callable, false);
+        }
+    } else {
+        element_s.addEventListener("click", callable, false);
+    }
 }
