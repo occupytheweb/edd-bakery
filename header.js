@@ -1,0 +1,44 @@
+"use strict";
+
+
+var header = {};
+
+
+header.components = {
+    stickyMenu : {
+                    navbar   : dom.id_get("sticky-menu"),
+
+                    y_offset : function() { return window.pageYOffset; },
+
+                    freeze   : function() {
+                        this.navbar.classList.add("fixed");
+                    },
+
+                    release  : function() {
+                        this.navbar.classList.remove("fixed");
+                    },
+
+                    handler  : function() {
+                        if( this.y_offset() > 100) {
+                            this.freeze();
+                        } else {
+                            this.release();
+                        }
+                    }
+                 },
+
+    dropdowns  : {
+                    drops   : dom.classes_get("dropdown"),
+
+                    handler : function(thisDrop, sourceEvent) {
+                        if (sourceEvent.target == "") {
+                            styles.toggle_class(thisDrop, "open");
+                        }
+                    }
+                 }
+};
+
+
+window.addEventListener("scroll", function() { header.components.stickyMenu.handler(); }, false);
+
+set_click_handler(header.components.dropdowns.drops, function() { header.components.dropdowns.handler(this, event); } );
