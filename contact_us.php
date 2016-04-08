@@ -18,16 +18,42 @@
 
 <body background="bakery-background-1.jpg">
 
-  <?php
+<?php
     require_once('header.php');
- ?> 
+?>
+
+<?php
+if (isset($_REQUEST[ok])){
+	$xml = new DOMDocument("1.0","UTF-8");
+	$xml->load("contact.xml");
+	
+	$rootTag = $xml->getElementsByTagName("User")->item(0);
+	
+	$fullnameTag = $xml->createElement("fullname",$_REQUEST['txtName']);
+	$emailTag = $xml->createElement("email",$_REQUEST['emlEmail']);
+	$subjectTag = $xml->createElement("subject",$_REQUEST['txtSubject']);
+	$messageTag = $xml->createElement("message",$_REQUEST['txtMessage']);
+	
+	$rootTag->appendChild($fullnameTag);
+	$rootTag->appendChild($emailTag);
+	$rootTag->appendChild($subjectTag);
+	$rootTag->appendChild($messageTag);
+	
+	$xml->save("contact.xml");
+?>
+	
+	
+	
+	
+
+	
  
 	<div class="jumbotron">
       <div class="container">
         <h1>Contact</h1>
       </div>
     </div>
-	<div  style="width: 12.5%;height: 100%;float: left;display: block;position: relative">
+ <div  style="width: 12.5%;height: 100%;float: left;display: block;position: relative">
   <h3>Need a cake?</h3>
   <p>Call today</p>
  </div>
@@ -85,12 +111,9 @@
 	<td><input type="submit" value="Submit Form" onclick="validateAll()" /></td>
 	</tr>
 	
+	</table>
+	</form>
 	</article>
 	
-	
-	
-	
- 
-	
-	
-	
+	</body>
+	</html>
