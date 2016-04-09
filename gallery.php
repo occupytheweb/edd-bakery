@@ -13,13 +13,13 @@
   <link rel="stylesheet" href="css/gallery.css" />
 </head>
 
-<body background="bakery-background-1.jpg">
+<body>
 
   <?php
     require_once('header.php');
  ?> 
  
-<h2 style="margin:50px; color:black">Gallery</h2>
+<h2 class="g_h2">Gallery</h2>
 
 
 <div class="img">
