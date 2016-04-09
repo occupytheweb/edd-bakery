@@ -1,17 +1,4 @@
-<!doctype html>
-<!--
-  /**
-   * @author      Alan Jean  <afinegameofnil@gmail.com
-   * @description Landing page
-   * @version     0.1
-   * @depend      ./css/grids.css
-   *              ./css/typography.css
-   *              ./css/display.css
-   *              ./css/nav
-   *              ./css/dropdown.css
-   *              ./js/   *none yet*
-   */
-   -->
+<!DOCTYPE html>
 <html>
 	<head>
 	  <meta charset="utf-8" />
@@ -21,109 +8,18 @@
 	  <meta name="description" content="EdD Ltd: Bakery and Pastry Shop = Landing Page" />
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!--	  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' /> -->
-	  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' />
-	  <link rel="stylesheet" href="css/display.css" />
-	  <link rel="stylesheet" href="css/typography.css" />
-	  <link rel="stylesheet" href="css/nav.css" />
-	  <link rel="stylesheet" href="css/grids.css" />
-	  <link rel="stylesheet" href="css/glyphs.css" />
-	  <link rel="stylesheet" href="css/dropdown.css" />
+	  <link rel="stylesheet" href="./css/display.css" />
+	  <link rel="stylesheet" href="./css/typography.css" />
+	  <link rel="stylesheet" href="./css/nav.css" />
+	  <link rel="stylesheet" href="./css/grids.css" />
+	  <link rel="stylesheet" href="./css/glyphs.css" />
+	  <link rel="stylesheet" href="./css/dropdown.css" />
 	</head>
 
 	<body>
 		<div class="page-content">
-			<header class="navbar" role="navigation">
-				<div id="bg">
-		    </div>
 
-			  <div class="container">
-			    <div class="navbar-header">
-
-			      <a id="nav-logo" href="/">
-			        <!-- edd logo -->
-			      </a>
-		        </div><!-- ./navbar-header -->
-
-		      <div id="contact">
-
-		      </div>
-
-		      <nav class="nav-menu">
-		        <ul class="nav navbar-nav">
-		          <li>
-		          	<a href="">Home</a>
-		          </li>
-
-		          <li class="dropdown">
-		          	<a class="dropdown-toggle">
-		          		Cakes
-		          		<span class="glyphicon glyphicon-menu-down"></span>
-		          	</a>
-		        	 	<!--TODO:: glyph here-->
-		          	<ul class="dropdown-menu">
-		          	  <li>
-		          	  	<a href="#">Wedding Cakes</a>
-		          	  </li>
-		          	  <li class="divider"></li>
-		          	  <li>
-		          	  	<a href="#">Birthday Cakes</a>
-		          	  </li>
-		          	  <li class="divider"></li>
-		          	  <li>
-		          	  	<a href="#">Cupcakes</a>
-		          	  </li>
-		          	  <li class="divider"></li>
-		          	  <li>
-		          	  	<a href="#">Treats & Flavours</a>
-		          	  </li>
-	          	  </ul>
-		          </li>
-
-		          <li>
-		          	<a href="#">Bread</a>
-		          </li>
-
-		          <li>
-		          	<a href="#">Store</a>
-		          </li>
-
-		          <li>
-		          	<a href="#">About</a>
-		          </li>
-
-		          <li>
-		          	<a href="#">FAQ</a>
-		          </li>
-
-		          <li>
-		          	<a href="#">Contact</a>
-		          </li>
-	          </ul>
-
-	          <ul class="nav navbar-nav navbar-right">
-		          <li class="nav-login dropdown" id="login">
-		          	<a>Login</a>
-
-		          	<ul class="dropdown-menu">
-			          	<li>
-			          	<span class="invisble">
-				          	<form action="login.php" method="POST" id="nav-form">
-				          	 <input type="email" placeholder="e-mail" name="alias"/>
-				          	</form>
-			          	</span>
-			          	</li>
-    					    <li id="pass">
-			          		<input type="password" placeholder="password" name="password"/>
-			          		<button type="button">Register</button>
-			          		<button type="button">Login</button>
-			          	</li>
-				        </ul><!-- /.dropdown-menu -->
-		          </li><!-- /.nav-login -->
-	          </ul><!-- /.nav navbar-nav navbar-right dropdown -->
-          </nav><!-- /.nav-menu -->
-        </div><!-- /.container -->
-      </header><!-- /.navbar -->
+      <?php include_once('header.php'); ?>
 
     	<section class="jumbotron" id="tagline">
     		<div class="container">
@@ -133,7 +29,7 @@
 
   		<div class="container">
       	<div class="textContent col-md-8">
-					<h2>Hello & Welcome to Epi de Dieu Ltée</h2>
+					<h2>Hello &amp; Welcome to Epi de Dieu Ltée</h2>
       	  <p>
       		Epi de Dieu ltée creates amazing pastries and treats, delivering throughout Quatre-Bornes and the vicinity. Our cakes are made to order and can cater for your imagination.
       		</p>
@@ -238,7 +134,9 @@
 				</footer>
 			</div><!-- /.wrapper.separator -->
 
-			<script type="text/javascript" src="handler.js"></script>
-			<!-- <script type="text/javascript" src="draw.js" async></script> -->
+			<script type="text/javascript" src="utils.js"></script>
+			<script type="text/javascript" src="header.js"></script>
+
+
 		</body>
 	</html>
