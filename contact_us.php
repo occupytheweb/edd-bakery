@@ -10,13 +10,12 @@
   <link rel="stylesheet" href="css/glyphs.css" />
   <link rel="stylesheet" href="css/dropdown.css" />
   <link rel="stylesheet" href="css/store.css" />
-  <link rel="stylesheet" href="css/gallery.css" />
   <link rel="stylesheet" href="css/contact.css" />
   
   <script src="contact.js" rel="stylesheet" type="text/javascript" ></script>
 </head>
 
-<body background="bakery-background-1.jpg">
+<body>
 
 <?php
     require_once('header.php');
@@ -61,18 +60,18 @@
         <h1>Contact</h1>
       </div>
     </div>
- <div  style="width: 12.5%;height: 100%;float: left;display: block;position: relative">
+ <div class="c_sidebar" >
   <h3>Need a cake?</h3>
   <p>Call today</p>
  </div>
 	<article class="">
 	<div class="location">
-	<label><h3 style="color:green">Store Location:</h3></label>
+	<label><h3 class="label">Store Location:</h3></label>
 	<p>5,Avenue Murphy,Quatres-Bornes</br></p>
 	</div>
 	
 	<div class="hours">
-	<label><h3 style="color:green">Store Hours:</h3></label>
+	<label><h3 class="label">Store Hours:</h3></label>
 	<p>Monday-Friday 8 A.M.-6 P.M <br/> Saturday 10 A.M.-4 P.M</br></p>
 	</div>
 	<br/><br/><br/><br/><br/><br/><br/>
