@@ -23,23 +23,31 @@
 ?>
 
 <?php
-if (isset($_REQUEST[ok])){
+
 	$xml = new DOMDocument("1.0","UTF-8");
 	$xml->load("contact.xml");
 	
-	$rootTag = $xml->getElementsByTagName("User")->item(0);
+	$rootTag = $xml->getElementsByTagName("feedback_db")->item(0);
 	
+	$feedbackTag = $xml->createElement("feedback");
+	
+	$userTag = $xml->createElement("user");
 	$fullnameTag = $xml->createElement("fullname",$_REQUEST['txtName']);
 	$emailTag = $xml->createElement("email",$_REQUEST['emlEmail']);
+	
 	$subjectTag = $xml->createElement("subject",$_REQUEST['txtSubject']);
 	$messageTag = $xml->createElement("message",$_REQUEST['txtMessage']);
 	
-	$rootTag->appendChild($fullnameTag);
-	$rootTag->appendChild($emailTag);
-	$rootTag->appendChild($subjectTag);
-	$rootTag->appendChild($messageTag);
+	$userTag->appendChild($fullnameTag);
+	$userTag->appendChild($emailTag);
 	
-	$xml->save("contact.xml");
+	$feedbackTag->appendChild($userTag);
+	$feedbackTag->appendChild($subjectTag);
+	$feedbackTag->appendChild($messageTag);
+	
+	$rootTag->appendChild($feedbackTag);
+	
+	$xml->save("contact.xml"); 
 ?>
 	
 	
