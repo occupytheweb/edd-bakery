@@ -7,19 +7,19 @@ namespace dbinterface {
   class db_handle extends \PDO
   {
       private static $DB = [
-        "name" => "edd",
-        "user" => "root",
-        "pass" => "superuser",
+          "name" => "edd",
+          "user" => "root",
+          "pass" => "superuser",
       ];
 
       private static $data_sources = [
-        "users" => "edd.users_tbl",
-        "store-cakes" => "edd.store_cakes_tbl",
+          "users"       => "edd.users_tbl",
+          "store-cakes" => "edd.store_cakes_tbl",
       ];
 
       private static $data_source_fieldset = [
-        "users" => array("UserID", "FirstName", "LastName", "Username", "Password"),
-        "store-cakes" => array("ID", "Name", "Price", "ImageBasePath", "Details"),
+          "users"       => array("UserID", "FirstName", "LastName", "Username", "Password"),
+          "store-cakes" => array("ID", "Name", "Price", "ImageBasePath", "Details", "ActiveStatus"),
       ];
 
       private $DSN = 'mysql:host=127.0.0.1;dbname=';
@@ -27,22 +27,7 @@ namespace dbinterface {
 
 
       public static function exception_handler($exception) {
-          /*just*/ die('Unhandled exception: ' . $exception->$getMessage());
-      }
-
-
-      public function __construct() {
-          $this->DSN .= static::$DB['name'];
-
-          set_exception_handler(array(__CLASS__, 'exception_handler'));
-
-          parent::__construct($this->DSN, static::$DB['user'], static::$DB['pass']);
-
-          $this->data_route = static::$data_sources['users'];
-          $this->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-          $this->setAttribute(\PDO::ATTR_EMULATE_PREPARES, false);
-
-          restore_exception_handler();
+          /*just*/ die('Unhandled exception: ' . $exception->getMessage());
       }
 
 
@@ -95,6 +80,21 @@ namespace dbinterface {
                   $statement->bindValue($i, $value);
               }
           }
+      }
+
+
+      public function __construct() {
+          $this->DSN .= static::$DB['name'];
+
+          set_exception_handler(array(__CLASS__, 'exception_handler'));
+
+          parent::__construct($this->DSN, static::$DB['user'], static::$DB['pass']);
+
+          $this->data_route = static::$data_sources['users'];
+          $this->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+          $this->setAttribute(\PDO::ATTR_EMULATE_PREPARES, false);
+
+          restore_exception_handler();
       }
 
 
