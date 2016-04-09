@@ -10,16 +10,25 @@
   <link rel="stylesheet" href="css/glyphs.css" />
   <link rel="stylesheet" href="css/dropdown.css" />
   <link rel="stylesheet" href="css/store.css" />
+   <link rel="stylesheet" href="css/aboutus.css" />
 </head>
 
-<body background="background.jpg">
+<body>
 
   <?php
     require_once('header.php');
  ?> 
-<div style=" height: 100%;float: left;display: inline-block">	
-<h1><strong><u>Welcome to Epi De Dieu</strong></u></h1>
+ 
 
+<div  class="a_sidebar">
+  <h3>Need a cake?</h3>
+  <p>Call today</p>
+ </div>
+ 
+ <div class="left">
+ 
+<div class="article">	
+<h1><strong><u>Welcome to Epi De Dieu</strong></u></h1>
 
 <h3 class="">Our Story</h3>
 
@@ -38,31 +47,29 @@ deliver value and an excellent customer service.
 
 </br>
 </br>
-<img src="image5" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;" />
-<img src="image1" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;" />
-<img src="image2" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;" />
-<img src="image3" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;" />
-<img src="image4" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;" />
-<p style="clear: both;">
+<img  />
+<img src="res/edd1.jpg" class="image" />
+<img src="res/edd2.jpg" class="image" />
+<img src="res/edd3.jpg" class="image" />
 <br/>
 <br/>
 </div>
 
-<div  style="width: 12.5%;height: 100%;float: left;display: block;position: relative">
-  <h3>Need a cake?</h3>
-  <p>Call today</p>
- </div>
- 
-<div class=""><strong>Company Information</strong></div></br>
-<div class="">
+ <div class="">
+<strong>Company Information</br>
+
 Email:<a href="epi@gmail.com">epi@gmail.com</a></br>
 Contact Number: 4272565 | 57985211 </br>
 Address: 5,Avenue Murphy,Quatres-Bornes</br>
 </div>
 
+</div>
+
+
+
 </br></br></br>
 
-<footer style="text-align:center">
+<footer>
 DAILY SELECTION OF BREADS, PASTRIES, COOKIES, CAKES AND MORE AVAILABLE FOR PICKUP ANY TIME!
 MONDAY-FRIDAY 8 A.M.-6 P.M. | SATURDAY 10 A.M.-4 P.M. </br>
 Epi De Dieu
