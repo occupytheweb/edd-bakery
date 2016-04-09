@@ -1,0 +1,81 @@
+.nav-tabs {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(221, 221, 221);
+}
+
+.tab {
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: initial;
+
+  border-top-style: solid;
+  border-right-style: solid;
+  border-left-style: solid;  
+  border-bottom-style: initial;
+
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-left-width: 1px;
+  border-bottom-width: 0px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.nav-tabs > button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  border: none;
+  float: right;
+}
+
+.nav-tabs > .active {
+  color: #333;
+  background-color: #fff;
+  
+  border-color: #ddd;
+  border-top-color: rgb(221, 221, 221);
+  border-right-color: rgb(221, 221, 221);
+  border-left-color: rgb(221, 221, 221);
+  border-bottom-color: rgb(221, 221, 221);
+  
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+
+  border-bottom-width: 0px;
+}
+
+.vert-tab {
+  border-radius: 5px;
+  width: 70px;
+  height: 70px;
+  min-width: 0;
+  padding: 0;
+    
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+
+  display: list-item;
+  list-style: none;
+  float: initial;
+}
+
+.user-pane {
+  float: left;
+}
+
+.user-pane::before,
+.user-pane::after {
+  clear: both;
+}
+
+.panel {
+  padding: 10px;
+  width: 75%;
+  float: left;
+}
