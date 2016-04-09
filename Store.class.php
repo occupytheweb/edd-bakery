@@ -11,7 +11,7 @@ class Store
 
 
     private function pull_products() {
-        $this->products = $this->dbh->pull();
+        $this->products = empty($this->products) ? $this->dbh->pull() : $this->products;
         return $this->products;
     }
 
@@ -25,12 +25,27 @@ class Store
 
 
     /**
-     * Instantiates a Product object from the product data referenced by a given index
-     * @param  int     $id  the index of the required product data from $this->product
-     * @return Product      the instantiated Product
+     * Instantiates a Product object from the product data referenced by a given index or sharedProductID
+     * @param  mixed     $id  the index or the sharedPID of the required product data from $this->product
+     * @return Product        the instantiated Product
      */
     public function pull_product($id) {
-        $productData = isset($this->products) ? $this->products[$id] : self::pull_products()[$id];
+        self::pull_products();
+        $sharedIDPattern = "/^\w+-(\d+)$/";
+
+        if (preg_match($sharedIDPattern, $id, $pID)) {
+            $id = $pID[1];
+            $i  = count($this->products);
+            while ($i--) {
+                if ($this->products[$i]['ID'] == $id) {
+                    $productData = $this->products[$i];
+                    break;
+                }
+            }
+        } else {
+            $productData = $this->products[$id];
+        }
+
         return new Product($this->section, $productData);
     }
 
@@ -52,7 +67,38 @@ class Store
     }
 
 
+    /**
+     * Prints a script containing a JSON representation of the current Store's public Products details
+     * @return String  HEREDOC of the HTML-ready js script tag
+     */
+    public function print_encoded_products_data() {
+        self::pull_products();
+        $data = array();
+        $i    = count($this->products);
+
+        while ($i--) {
+            $thisProduct = self::pull_product($i);
+
+            if ($thisProduct->active) {
+                $data[ "{$thisProduct->sharedID}" ] = $thisProduct->data_encode();
+            }
+        }
+
+
+        $encodedData = addslashes(json_encode($data));
+
+        $js_var      = <<<JS
+<script type="text/javascript">
+var products = JSON.parse(' {$encodedData} ');
+</script>
+JS;
+        echo $js_var;
+    }
+
+
     public function __destruct() {
         $this->dbh = null;
     }
 }
+
+
