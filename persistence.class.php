@@ -13,7 +13,7 @@ class persistence
 
 
     public static function pull() {
-        self::$user = isset($_SESSION['user']) ? $_SESSION['user'] : null;
+        self::$user = isset($_SESSION['user']) ? $_SESSION['user'] : new user(null);
     }
 
 
