@@ -32,15 +32,15 @@ $profile = <<<PROFILE
   <a>{$username}</a>
 
   <ul class="dropdown-menu">
-    <li><a>Profile</a></li>
-    <li><a>Sign Out</a></li>
+    <li id="profile"><a>Profile</a></li>
+    <li id="sign_out"><a>Sign Out</a></li>
   </ul>
 </li>
 PROFILE;
 
 
 $header = <<<HEAD
-<header class="navbar" role="navigation">
+<header id="header-container" class="navbar" role="navigation">
   <div id="bg">
   </div>
 
