@@ -1,4 +1,8 @@
-//vanilla ajax
+//once upon a midnight dreary,
+//while I pondered, weak and dreary,
+//over many a quaint and curious volume of forgotten lore,
+//came an AJAX call rapping, tapping, at my chamber door...
+
 var ajax = {};
 
 
