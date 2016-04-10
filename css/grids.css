@@ -62,8 +62,8 @@ body {
 .modal {
   display: none;
   position: fixed;
-  top: 25%;
-  height: 50%;
+  top: 21%;
+  height: 64%;
   width: 80%;
   right: 0;
   bottom: 0;
@@ -78,6 +78,14 @@ body {
   background: rgba(245, 245, 245, 1);
   box-shadow: 0px 0px 15px 5px rgba(118, 118, 118, 0.62);
 }
+
+@media screen and (min-height: 800px) {
+  .modal {
+    top: 25%;
+    height: 50%;
+  }
+}
+
 
 .modal.active {
   opacity: 1;

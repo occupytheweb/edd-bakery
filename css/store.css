@@ -109,10 +109,15 @@
   position: absolute;
 }
 
+@media screen and (min-height: 800px) {
+  #product-expanded .images-container {
+    margin-top: 10px;
+  }
+}
+
 #product-expanded .images-container {
   width: 50%;
   float: left;
-  margin-top: 10px;
 }
 
 #product-expanded .description-container {
