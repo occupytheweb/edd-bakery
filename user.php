@@ -1,5 +1,7 @@
 <?php
 
+require_once('cart.class.php');
+
 
 class user
 {
@@ -15,15 +17,16 @@ class user
         if($userData === null) {
             $this->userID = $this->firstName = $this->lastName = $this->username = "";
             $this->status['loggedIn'] = false;
+            $this->cart               = null;
         } else {
             $this->userID             = $userData['UserID'   ];
             $this->firstName          = $userData['FirstName'];
             $this->lastName           = $userData['LastName' ];
             $this->username           = $userData['Username' ];
+            $this->cart               = new cart();
             $this->status['loggedIn'] = true;
         }
 
-        $this->cart             = null;
         $this->status['reason'] = "";
     }
 
