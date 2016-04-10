@@ -1,0 +1,23 @@
+.location {
+	float: left;
+	margin: 15px;
+}
+
+.hours {
+	float:left;
+	margin: 15px;
+}
+
+
+
+.c_sidebar {
+	width: 12.5%;
+	height: 100%;
+	float: left;
+	display: block;
+	position: relative; }
+
+.label {
+	color:green;
+}
+

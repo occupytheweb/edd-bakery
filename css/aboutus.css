@@ -1,0 +1,26 @@
+
+
+.article{
+	 height: 100%;float: left;display: inline-block;
+}
+
+.image{
+	 float: left; width:364px;height:400px; margin-right: 1%; margin-bottom: 0.5em;
+}
+
+.p{
+	clear: both;
+}
+
+.a_sidebar{
+	width: 12.5%;height: 100%;float: left;display: block;position: relative;
+}
+
+footer{
+	text-align:center;
+}
+
+.left{
+	float:left;
+	width:87.5%
+}
