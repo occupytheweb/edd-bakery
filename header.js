@@ -43,15 +43,52 @@ header.components = {
     dropdowns  : {
                     drops   : dom.classes_get("dropdown"),
 
+                    signoff : dom.id_get('sign_out'),
+
                     handler : function(thisDrop, sourceEvent) {
                         if (sourceEvent.target == "") {
                             styles.toggle_class(thisDrop, "open");
                         }
                     }
+                 },
+
+    head       : {
+                    container : dom.id_get('header-container'),
+
+                    wipe      : function() { dom.clear( header.components.head.container ); },
+
+                    write     : function(content) {
+                        header.components.head.container.innerHTML = content;
+                    }
                  }
 };
 
 
-window.addEventListener("scroll", function() { header.components.stickyMenu.handler(); }, false);
+header.handlers   = {
+    write_head : function(headContent) {
+        header.components.head.wipe();
+        header.components.head.write(headContent);
+        header.handlers.init();
+    },
 
-set_click_handler(header.components.dropdowns.drops, function() { header.components.dropdowns.handler(this, event); } );
+    update     : function() {
+        ajax.get('controllers/header.php', null, function(response) { header.handlers.write_head(response); } );
+    },
+
+    init       : function() {
+        window.addEventListener("scroll", function() { header.components.stickyMenu.handler(); }, false);
+
+        set_click_handler(header.components.dropdowns.drops, function() { header.components.dropdowns.handler(this, event); } );
+
+        try {
+            set_click_handler(header.components.dropdowns.signoff, function() {
+                                                                    ajax.get('controllers/log_out.php', null, function(response) {
+                                                                        header.handlers.write_head(response); } );
+                                                                    }
+                             );
+        } catch(e) { }
+    }
+}
+
+
+header.handlers.init();

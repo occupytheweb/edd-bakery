@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doc target="home">
+  <transcript lang="en">
+    <extract id="tagline">
+      Pastries, baked goodies &lt;br /&gt;and all things cake!
+    </extract>
+
+    <extract id="welcome">
+      Hello &amp; Welcome to Epi de Dieu Ltée
+    </extract>
+
+    <extract id="intro">
+      Epi de Dieu ltée creates amazing pastries and treats, delivering throughout Quatre-Bornes and the vicinity. Our cakes are made to order and can cater for your imagination.
+    </extract>
+
+    <extract id="events">
+      Epi de Dieu can create cakes for:
+    </extract>
+
+    <extract id="wedding">
+      Weddings
+    </extract>
+
+    <extract id="birthday">
+      Birthdays
+    </extract>
+    
+    <extract id="corporate">
+      Corporate events
+    </extract>
+    
+    <extract id="special">
+      Special occasions
+    </extract>
+
+    <extract id="create">
+      Whether you want a five tier wedding cake for your special day, a unique birthday cake for a one to one hundred year old, corporate cupcakes for a launch event, or you just fancy some cupcakes for the weekend. Epi de Dieu can create a special memorable cake just for you.
+    </extract>
+
+    <extract id="click">
+      Click on one of the cake icons below and see which cake takes your fancy? There is something for everyone, and who doesn't like cake?
+    </extract>
+
+    <extract id="visit">
+      Visit us and try our delicious range
+    </extract>
+
+    <extract id="time">
+      Take time out of your busy day and treat yourself to some sweetness.
+    </extract>
+
+    <extract id="fb">
+      Like us on Facebook
+    </extract>
+
+    <extract id="contact">
+      Contact Epi de Dieu Ltd
+    </extract>
+  </transcript>
+
+
+  <transcript lang="fr">
+
+  </transcript>
+</doc>

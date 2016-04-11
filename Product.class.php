@@ -39,8 +39,9 @@ class Product
      * @return string      the resolved image's path
      */
     public function image_source($imgID = 1) {
+        $root = $_SERVER['DOCUMENT_ROOT'];
         $src  = "res/products/{$this->imageBasePath}/{$imgID}";
-        $src .= file_exists("$src.jpg") ? ".jpg" : ".png";
+        $src .= file_exists("{$src}.jpg") ? ".jpg" : ".png";
         return $src;
     }
 
@@ -79,11 +80,12 @@ MARKUP;
      */
     public function data_encode() {
         $data = [
-                  'id'      => $this->id,
-                  'name'    => htmlspecialchars($this->name   ),
-                  'details' => htmlspecialchars($this->details),
-                  'price'   => $this->price,
-                  'img_src' => self::image_source(1)
+                  'id'       => $this->id,
+                  'sharedID' => $this->sharedID,
+                  'name'     => htmlspecialchars($this->name   ),
+                  'details'  => htmlspecialchars($this->details),
+                  'price'    => $this->price,
+                  'img_src'  => self::image_source(1)
                 ];
 
         return $data;

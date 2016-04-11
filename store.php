@@ -7,7 +7,6 @@
   <title>EdD Bakery and Pastry Shop</title>
   <meta name="description" content="EdD Ltd: Bakery and Pastry Shop = Landing Page" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' />
   <link rel="stylesheet" href="css/display.css" />
   <link rel="stylesheet" href="css/typography.css" />
   <link rel="stylesheet" href="css/nav.css" />
@@ -53,6 +52,8 @@
   </div>
 
   <div id="product-expanded" class="modal">
+  <button id="close-product-preview" class="close seamless">x</button>
+
     <div class="images-container">
       <img id="product-image" />
     </div>
@@ -64,7 +65,7 @@
       </div>
 
       <div class="actions-container">
-        <button type="button">Add to Cart</button>
+        <button id="add-to-cart" type="button">Add to Cart</button>
       </div>
     </div>
   </div>
@@ -134,10 +135,10 @@
     </div>
   </div>
 
-  <script type="text/javascript" src="utils.js"></script>
   <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="utils.js"></script>
+  <script type="text/javascript" src="ajax.js"></script>
   <script type="text/javascript" src="header.js"></script>
   <script type="text/javascript" src="store.js"></script>
-  <script type="text/javascript" src="ajax.js"></script>
 </body>
 </html>
