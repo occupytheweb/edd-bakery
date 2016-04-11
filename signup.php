@@ -20,12 +20,12 @@
 
 <p>Please enter your personal details and click on <strong>next</strong></p>
 <div class="container">
-	
+
 <div class="right">
 <form action="#" method="post" id="register_form" onsubmit="">
 	<table cellpadding="0" cellspacing="0" border="0" class="table_insert">
 <!-- add field: address,email(use validation Js), -->
-		
+
 		<tr>
 			<th>
 			<label for="first_name">First name <em>*</em> : </label>
@@ -34,7 +34,7 @@
 				<input type="text" name="first_name" id="first_name" maxlength="15" required/>
 			</td>
 		</tr>
-		
+
 			<tr>
 			<th>
 			<label for="last_name">Last name <em>*</em> : </label>
@@ -43,7 +43,7 @@
 				<input type="text" name="last_name" id="last_name"  maxlength="25" required/>
 			</td>
 		</tr>
-		
+
 		<tr>
 			<th>
 			<label for="date">Date of Birth <em>*</em>:</label>
@@ -51,14 +51,14 @@
 			<td>
 				<input type="date" name="date" id="date" />
 			</td>
-		</tr>	
+		</tr>
 		<tr>
 			<th>
 			<label for="gender">Gender <em>*</em> : </label>
 			</th>
 			<td>
 				 <input type="radio" name="gender" value="male" checked>  <font color="black">Male</font>
-				<input type="radio" name="gender" value="female"> <font color="black">Female</font><br> 
+				<input type="radio" name="gender" value="female"> <font color="black">Female</font><br>
 			</td>
 		</tr>
 		<tr>
@@ -106,6 +106,7 @@
 <div class="left"><img src="register.jpg" class="img"></div>
 <div class="clear"></div>
 </div>
+<script type="text/javascript" src="signupval.js"></script>
 </body>
 
 <!-- Enter footer here -->
