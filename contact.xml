@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feedback_db xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="contact.xsd">
+	<feedback>
+		<user>
+			<fullname/>
+			<email/>
+		</user>	
+		<subject/>
+		<message/>
+	</feedback>
+<feedback><user><fullname/><email/></user><subject/><message/></feedback><feedback><user><fullname>Neshen Mooneesamy</fullname><email>nesh@hotmail.com</email></user><subject>bad service</subject><message>foul words</message></feedback></feedback_db>
