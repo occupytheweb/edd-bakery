@@ -1,10 +1,10 @@
 (function ($) {
-    $('#activate').on('click', function () {
+    $(document).ready(function () {
         $('div, img').slideShow({
             timeOut: 2000,
             showNavigation: true,
-            pauseOnHover: true,
-            swipeNavigation: true
+            pauseOnHover: false,
+            swipeNavigation: false
         });
 
         var navbar=$('.navbar')
