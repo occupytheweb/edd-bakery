@@ -42,7 +42,8 @@
       </nav>
       <button id="but1">Message</button><br></br>
       <div id="msg">
-        <p>hey</p>
+        <h4>Messing title</h4>
+        <p>Person:  </p><p>Message</p>
       </div>
       <button id="but2">Profile</button>
       <div id="prof">
