@@ -112,3 +112,12 @@
 					<div style="clear: both; height: 25px; width: 100%; bottom: 0px; background-image: url(res/ft.png);">
 					</div>
 				</footer>
+				
+				
+	  <script type="text/javascript" src="utils.js"></script>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="header.js"></script>
+  <script type="text/javascript" src="ajax.js"></script>
+  
+  </body>
+  </html>
