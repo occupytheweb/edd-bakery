@@ -64,7 +64,10 @@ deliver value and an excellent customer service.
 </div>
 	
 		<footer>
-
+			<form action="">
+				<input type="radio" name="language" value="english">English<br>
+				<input type="radio" name="language" value="french">French<br>
+			</form>
 	<ul>
 		<li>
 			<p class="home">Home</p>
