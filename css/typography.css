@@ -57,3 +57,10 @@ h2 {
 footer {
   text-align: center;
 }
+
+*::selection {
+  background: #ABEFD9;
+}
+*::-moz-selection {
+  background: #ABEFD9;
+}

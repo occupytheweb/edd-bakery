@@ -84,17 +84,15 @@
 }
 
 #product-expanded div {
-  position: relative;
+  position: absolute;
 }
 
 #product-expanded img {
-  float: left;
-  display: inline-block;
-  width: 450px;
-  height: 450px;
-  padding-left: 50px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  display: block;
+  margin: auto;
+  top: 10%;
+  bottom: 0;
+  position: relative;
 }
 
 #description-container > div {
@@ -117,19 +115,23 @@
 
 #product-expanded .images-container {
   width: 50%;
+  height: 100%;
   float: left;
 }
 
 #product-expanded .description-container {
   width: 50%;
-  float: right;
+  height: 100%;
+  right: 0;
 }
 
 #product-expanded .actions-container {
   width: 50%;
   bottom: 0;
   padding: 20px;
-  display: inline-block;
+  position: absolute;
+  margin: auto;
+  display: block;
   text-align: center;
   float: left;
 }

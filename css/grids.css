@@ -64,7 +64,7 @@ body {
   position: fixed;
   top: 21%;
   height: 64%;
-  width: 80%;
+  width: 70%;
   right: 0;
   bottom: 0;
   left: 0;
@@ -109,4 +109,35 @@ body {
   transform: rotate(360deg);
   background-color: #fafafa;
   color: #6a6a6a;
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  border-style: none;
+  line-height: 20px;
+  font-size: 16px;
+  background-color: #f7a3b8;
+  border-color: #eb9baf;
+  color: #ffffff;
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+  transition-delay: initial;
+}
+
+button:hover {
+  background-color: #e899ad;
 }
