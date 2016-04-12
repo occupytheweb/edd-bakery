@@ -9,8 +9,10 @@
   <link rel="stylesheet" href="css/grids.css" />
   <link rel="stylesheet" href="css/glyphs.css" />
   <link rel="stylesheet" href="css/dropdown.css" />
-  <link rel="stylesheet" href="css/store.css" />
    <link rel="stylesheet" href="css/aboutus.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+   
+ 
 </head>
 
 <body>
@@ -18,7 +20,7 @@
   <?php
     require_once('header.php');
  ?> 
- 
+<div id="main">
 
 <div  class="a_sidebar">
   <h3>Need a cake?</h3>
@@ -33,7 +35,7 @@
 <h3 class="">Our Story</h3>
 
 
-<p><font size="3">Epi de Dieu is a noteworthy bakery and pastry shop in Quatres-Bornes.
+<p><font class="font">Epi de Dieu is a noteworthy bakery and pastry shop in Quatres-Bornes.
 It has been set up in 2002 with the intent of providing the vicinity with baked goods and all things cake. At start, the two owners, Mr and Mrs Thomas could run
 the business smoothly by themselves. After one year, the number of client climbed up significantly and the owners hired three qualified workers from
 Bangladesh to bake the cakes and breads. Actually, there are eight workers  in total working at Epi de Dieu, the owners inclusive.
@@ -54,26 +56,53 @@ deliver value and an excellent customer service.
 <br/>
 <br/>
 </div>
-
- <div class="">
-<strong>Company Information</br>
-
-Email:<a href="epi@gmail.com">epi@gmail.com</a></br>
-Contact Number: 4272565 | 57985211 </br>
-Address: 5,Avenue Murphy,Quatres-Bornes</br>
-</div>
-
-</div>
+</article>
 
 
 
 </br></br></br>
+</div>
+	
+		<footer>
 
-<footer>
-DAILY SELECTION OF BREADS, PASTRIES, COOKIES, CAKES AND MORE AVAILABLE FOR PICKUP ANY TIME!
-MONDAY-FRIDAY 8 A.M.-6 P.M. | SATURDAY 10 A.M.-4 P.M. </br>
-Epi De Dieu
+	<ul>
+		<li>
+			<p class="home">Home</p>
+			<a class="logo" href="about_us.php">Epi De Dieu</a>
+		</li>
+		<li>
+			<p class="services">Products</p>
+
+			<ul>
+				<li><a href="#">Breads</a></li>
+				<li><a href="#">Cakes</a></li>
+				<li><a href="#">Pastries</a></li>
+			</ul>
+		</li>
+		<li>
+			<p class="reachus">Reach us</p>
+
+			<ul>
+				<li><a href="#">edd@hotmail.com</a></li>
+				<li><a href="#">Facebook Profile</a></li>
+				<li>Telephone:4272565</li>
+			</ul>
+		</li>
+		<li>
+			<p class="clients">Clients</p>
+
+			<ul>
+				<li><a href="#">Login Area</a></li>
+				<li><a href="#">Support Center</a></li>
+				<li><a href="#">FAQ</a></li>
+			</ul>
+		</li>
+	</ul>
+
 </footer>
+
+	</body>
+</html>
 
   <script type="text/javascript" src="utils.js"></script>
   <script type="text/javascript" src="jquery.js"></script>
