@@ -1,9 +1,13 @@
+.main{
+  background-color: #ffb3b3;
+}
+
 .img {
     margin: 50px;
-    border: 1px solid #ccc;
     float: left;
     width: 200px;
-}	
+    border: 2px solid black;
+}
 
 .img:hover {
     border: 1px solid #777;
@@ -26,7 +30,6 @@ footer {
 
 
 .g_h2{
-	margin:50px; 
+	margin:50px;
 	color:black;
 }
-

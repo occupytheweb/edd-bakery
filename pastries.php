@@ -17,10 +17,10 @@
 
   <?php
     require_once('header.php');
- ?> 
- 
+ ?>
+
   <h2 style="text-align:center">Pastries</h2>
- 
+
  <div class="img">
   <a target="_blank" href="res/pastries/crepe.jpg">
     <img src="res/pastries/crepe.jpg" alt="breads" width="300" height="200">
@@ -67,7 +67,7 @@
   <a target="_blank" href="res/pastries/eclair.jpg">
     <img src="res/pastries/eclair.jpg" alt="breads" width="300" height="200">
   </a>
-  
+
 
 <footer>
 					<div class="col-sm-12">
@@ -101,11 +101,9 @@
 					<div style="clear: both; height: 25px; width: 100%; bottom: 0px; background-image: url(res/ft.png);">
 					</div>
 				</footer>
-				
-  <script type="text/javascript" src="utils.js"></script>
-  <script type="text/javascript" src="jquery.js"></script>
-  <script type="text/javascript" src="header.js"></script>
-  <script type="text/javascript" src="ajax.js"></script>
-  
-  </body>
-  </html>
+      <script type="text/javascript" src="jquery.js"></script>
+      <script type="text/javascript" src="utils.js"></script>
+      <script type="text/javascript" src="ajax.js"></script>
+      <script type="text/javascript" src="header.js"></script>
+    </body>
+</html>
