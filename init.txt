@@ -1,0 +1,1 @@
+SET PASSWORD for 'root'@'localhost' = PASSWORD('superuser'); 
