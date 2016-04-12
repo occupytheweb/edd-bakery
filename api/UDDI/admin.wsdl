@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions targetNamespace="http://edd-bakery.com/api"
+             xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+             xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:this="http://edd-bakery.com/api"
+             xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xsi:schemaLocation="http://schemas.xmlsoap.org/wsdl/ http://schemas.xmlsoap.org/wsdl/ 
+                                 http://www.w3.org/2001/XMLSchema http://www.w3.org/2001/XMLSchema.xsd">
+    <types>
+        <xs:schema targetNamespace="http://edd-bakery.com/api"
+                    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                    elementFormDefault="qualified">
+
+            <xs:element name="Input" type="xs:string"/>
+                
+            <xs:element name="Result" type="xs:string" />
+
+        </xs:schema>
+    </types>
+
+    <!-- Input message -->
+    <message name="getHelloRequest">
+        <part name="input"  element="this:Input"/>
+    </message>
+    <!-- End Input message -->
+
+    <!-- Output message -->
+    <message name="getHelloResponse">
+        <part name="result" element="this:Result"/>
+    </message>
+    <!-- End Output message -->
+
+    <portType name="AdminServicePortType">
+        <operation name="Hello">
+            <input message="this:getHelloRequest"/>
+            <output message="this:getHelloResponse"/>
+        </operation>
+    </portType>
+
+    <binding name="AdminServiceBinding" type="this:AdminServicePortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="Hello">
+            <soap:operation soapAction="http://edd-bakery.com/api/hello" />
+            <input><soap:body use="literal"/></input>
+            <output><soap:body use="literal"/></output>
+        </operation>
+    </binding>
+
+    <service name="AdminService">
+        <port name="AdminServicePort" binding="this:AdminServiceBinding">
+            <soap:address location="http://localhost/edd/api/Server/Server.php"/>
+        </port>
+    </service>
+</definitions>
