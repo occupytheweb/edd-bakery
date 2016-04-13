@@ -16,10 +16,12 @@
 </head>
 
 <body>
-
+<
   <?php
     require_once('header.php');
  ?> 
+<div id="map"></div>
+<div class="page-content">
 <div id="main">
 
 <div  class="a_sidebar">
@@ -62,7 +64,7 @@ deliver value and an excellent customer service.
 
 </br></br></br>
 </div>
-	
+</div>
 		<footer>
 			<form action="">
 				<input type="radio" name="language" value="english">English<br>
@@ -111,6 +113,8 @@ deliver value and an excellent customer service.
   <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="header.js"></script>
   <script type="text/javascript" src="ajax.js"></script>
+  <script type="text/javascript" src="map.js"></script>
+  
 
 </body>
 </html>
