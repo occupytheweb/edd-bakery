@@ -121,7 +121,9 @@
 	</table>
 	</form>
 	</article>
-	
+	 <?php
+    require_once('footer.php');
+ ?>
   <script type="text/javascript" src="utils.js"></script>
   <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="header.js"></script>

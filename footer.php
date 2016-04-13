@@ -34,19 +34,17 @@
         <input type="radio" name="language" value="french"> French<br>
         </p>
 				<p class="footer-links">
-					<a href="#">Home</a>
+					<a href="home.php">Home</a>
 					·
-					<a href="#">Store</a>
+					<a href="gallery.php">Gallery</a>
 					·
-					<a href="#">Bread</a>
+					<a href="breads.php">Bread</a>
           ·
-          <a href="#">Store</a>
+          <a href="store.php">Store</a>
 					·
-					<a href="#">About</a>
+					<a href="about_us.php">About</a>
 					·
-					<a href="#">Faq</a>
-					·
-					<a href="#">Contact</a>
+					<a href="blog.php">Faq</a>
 				</p>
 
 				<p class="compname">EdD- Epi de Dieu &copy; 2016</p>

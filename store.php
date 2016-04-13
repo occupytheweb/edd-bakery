@@ -133,7 +133,9 @@
       </div>
     </div>
   </div>
-
+<?php
+    require_once('header.php');
+?>
   <script type="text/javascript" src="utils.js"></script>
   <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="header.js"></script>
