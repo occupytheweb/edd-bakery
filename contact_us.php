@@ -20,7 +20,7 @@
 <?php
     require_once('header.php');
 ?>
-<div class="page-content">
+<div id="page-content">
 <?php
 
 	$xml = new DOMDocument("1.0","UTF-8");

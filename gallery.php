@@ -18,7 +18,7 @@
   <?php
     require_once('header.php');
  ?> 
- <div class="page-content">
+ <div id="page-content">
 <h2 class="g_h2">Gallery</h2>
 
 
