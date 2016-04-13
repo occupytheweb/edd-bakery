@@ -1,11 +1,12 @@
 .main{
   background-color: #ffb3b3;
+    padding:100px;
 }
 
 .img {
-    margin: 50px;
+    margin: 150px;
     float: left;
-    width: 200px;
+    width: 300px;
     border: 2px solid black;
 }
 
@@ -27,9 +28,33 @@ footer {
 	text-align:center;
 }
 
-
+.msg {
+  text-align: center
+}
 
 .g_h2{
-	margin:50px;
-	color:black;
+  text-align: center;
+}
+
+
+.slideshow {
+    padding: 00;
+
+}
+
+#activate {
+    margin: 17px 0;
+    width: 300px;
+    height: 64px;
+    font-size: 18px;
+}
+
+.header {
+    margin: 100px 0;
+}
+
+.headerImg {
+    width: 100%;
+    height:85%;
+    align-items: center;
 }
