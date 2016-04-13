@@ -128,6 +128,10 @@ div.nav-menu > .nav{
   text-decoration: overline;
 }
 
+#login .dropdown-menu {
+  width: 215px;
+}
+
 #login > a {
   padding-right: 0px;
 }
@@ -135,10 +139,45 @@ div.nav-menu > .nav{
 #login > a:hover::after,
 #login > a:active::after {
   content: " /Join";
+  display: inline;
 }
 
 #login > ul {
   position: static;
+}
+
+.auth-status {
+  position: absolute;
+  right: 5px;
+}
+
+#login-inputs {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#login-inputs div {
+  text-align: center;
+}
+
+#login-inputs input {
+  width: 98%;
+}
+
+#login-inputs #uid-status {
+
+}
+
+#login-actions {
+  display: block;
+  margin-top: 2px;
+}
+
+#login-actions > button {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .navbar-nav > li > .dropdown-menu {
