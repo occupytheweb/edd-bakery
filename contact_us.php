@@ -20,7 +20,7 @@
 <?php
     require_once('header.php');
 ?>
-
+<div class="page-content">
 <?php
 
 	$xml = new DOMDocument("1.0","UTF-8");
@@ -121,6 +121,8 @@
 	</table>
 	</form>
 	</article>
+	
+	</div>
 	
   <script type="text/javascript" src="utils.js"></script>
   <script type="text/javascript" src="jquery.js"></script>
