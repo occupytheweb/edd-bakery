@@ -18,68 +18,69 @@
   <?php
     require_once('header.php');
  ?> 
-  <h2 style="text-align:center">Pastries</h2>
+ <div class="page-content">
+  <h2 class="h_2">Cakes</h2>
  
  <div class="img">
   <a target="_blank" href="res/cakes/c2.jpg">
-    <img src="cakes/c2.jpg" alt="breads" width="300" height="200">
+    <img src="res/cakes/c2.jpg" alt="breads" width="300" height="200">
   </a>
 </div>
 
 <div class="img">
   <a target="_blank" href="res/cakes/c1.jpg">
-    <img src="cakes/c1.jpg" alt="breads" width="300" height="200">
+    <img src="res/cakes/c1.jpg" alt="breads" width="300" height="200">
   </a>
 </div>
 
 <div class="img">
   <a target="_blank" href="res/cakes/c3.jpg">
-    <img src="cakes/c3.jpg" alt="breads" width="300" height="200">
+    <img src="res/cakes/c3.jpg" alt="breads" width="300" height="200">
   </a>
 </div>
 
 <div class="img">
   <a target="_blank" href="res/cakes/c4.jpg">
-    <img src="cakes/c4.jpg" alt="breads" width="300" height="200">
+    <img src="res/cakes/c4.jpg" alt="breads" width="300" height="200">
   </a>
 </div>
 
 <div class="img">
   <a target="_blank" href="res/cakes/c5.jpg">
-    <img src="cakes/c5.jpg" alt="breads" width="300" height="200">
+    <img src="res/cakes/c5.jpg" alt="breads" width="300" height="200">
   </a>
 </div>
 
 <div class="img">
   <a target="_blank" href="res/cakes/c6.jpg">
-    <img src="cakes/c6.jpg" alt="breads" width="300" height="200">
+    <img src="res/cakes/c6.jpg" alt="breads" width="300" height="200">
   </a>
 </div>
 
 <div class="img">
   <a target="_blank" href="res/cakes/c7.jpg">
-    <img src="cakes/c7.jpg" alt="breads" width="300" height="200">
+    <img src="res/cakes/c7.jpg" alt="breads" width="300" height="200">
   </a>
 </div>
 
 <div class="img">
   <a target="_blank" href="res/cakes/c8.jpg">
-    <img src="cakes/c8.jpg" alt="breads" width="300" height="200">
+    <img src="res/cakes/c8.jpg" alt="breads" width="300" height="200">
   </a>
 </div>
 
 <div class="img">
   <a target="_blank" href="res/cakes/c9.jpg">
-    <img src="cakes/c9.jpg" alt="breads" width="300" height="200">
+    <img src="res/cakes/c9.jpg" alt="breads" width="300" height="200">
   </a>
 </div>
 
 <div class="img">
   <a target="_blank" href="cakes/c10.jpg">
-    <img src="cakes/c10.jpg" alt="breads" width="300" height="200">
+    <img src="res/cakes/c10.jpg" alt="breads" width="300" height="200">
   </a>
 </div>
-
+</div>
 <footer>
 					<div class="col-sm-12">
 				  	<div class="col-md-offset-2 col-md-3">

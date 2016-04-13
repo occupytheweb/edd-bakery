@@ -18,8 +18,8 @@
   <?php
     require_once('header.php');
  ?> 
- 
- <h2 style="text-align:center">Breads</h2>
+  <div class="page-content">
+ <h2 class="h_2">Breads</h2>
  
  <div class="img">
   <a target="_blank" href="breads/b1.jpg">
@@ -56,7 +56,7 @@
     <img src="res/breads/b6.jpg" alt="breads" width="300" height="200">
   </a>
 </div>
-
+</div>
 <footer>
 					<div class="col-sm-12">
 				  	<div class="col-md-offset-2 col-md-3">

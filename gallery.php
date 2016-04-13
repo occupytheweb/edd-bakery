@@ -18,7 +18,7 @@
   <?php
     require_once('header.php');
  ?> 
- 
+ <div class="page-content">
 <h2 class="g_h2">Gallery</h2>
 
 
@@ -45,6 +45,7 @@
   <div class="desc">Pastries</div>
 </div>
 
+</div>
 
  <footer>
 					<div class="col-sm-12">
