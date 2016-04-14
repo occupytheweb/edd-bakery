@@ -1,4 +1,4 @@
-﻿<!DOCTYPE>
+<!DOCTYPE>
 <html>
 
 <head>
@@ -11,7 +11,8 @@
   <link rel="stylesheet" href="css/dropdown.css" />
   <link rel="stylesheet" href="css/store.css" />
   <link rel="stylesheet" href="css/gallery.css" />
-  <link rel="stylesheet" type="text/css" href="slideshow/jQuery-slideshow-plugin/plugin.css">
+  <link rel="icon" type="image/x-icon" href="./res/edd.ico">
+  <link rel="stylesheet" type="text/css" href="res/slideshow/plugin.css">
 </head>
 
 <body>
@@ -59,21 +60,23 @@
 </div>
 </div>
 
+
+
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="utils.js"></script>
+<script type="text/javascript" src="ajax.js"></script>
+<script type="text/javascript" src="header.js"></script>
+<script type="text/javascript" src="language.js"></script>
+<script type="text/javascript" src="router.js"></script>
+
+<script src="res/slideshow/jquery.hammer-full.min.js"></script>
+<script src="res/slideshow/plugin.js"></script>
+<script src="res/slideshow/slideshow.js"></script>
+
 <?php
-    require_once('header.php');
+    include_once('footer.php');
 ?>
-
-        <script type="text/javascript" src="jquery.js"></script>
-         <script type="text/javascript" src="utils.js"></script>
-         <script type="text/javascript" src="ajax.js"></script>
-         <script type="text/javascript" src="header.js"></script>
-         <script src="slideshow/js/jquery-1.11.1.min.js"></script>
-<script src="slideshowjs/jquery.hammer-full.min.js"></script>
-<script src="slideshow/jQuery-slideshow-plugin/plugin.js"> </script>
-<script src="slideshow/js/slideshow.js"></script>
-
-
-
 
 </body>
 </html>
