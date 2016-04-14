@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/store.css" />
   <link rel="stylesheet" href="css/contact.css" />
   
- 
+  <script src="contact.js" rel="stylesheet" type="text/javascript" ></script>
 </head>
 
 <body>
@@ -121,14 +121,6 @@
 	</table>
 	</form>
 	</article>
-	 <?php
-    require_once('footer.php');
- ?>
-  <script type="text/javascript" src="utils.js"></script>
-  <script type="text/javascript" src="jquery.js"></script>
-  <script type="text/javascript" src="header.js"></script>
-  <script type="text/javascript" src="ajax.js"></script>
-  <script src="contact.js" rel="stylesheet" type="text/javascript" ></script>
 	
 	</body>
 	</html>

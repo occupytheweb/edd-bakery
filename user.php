@@ -11,22 +11,26 @@ class user
     private $username;
     private $cart;
     private $status;
+    private $email;
+    private $gender;
 
 
     public function __construct($userData = null) {
         if($userData === null) {
-            $this->userID = $this->firstName = $this->lastName = $this->username = "";
+            $this->userID = $this->firstName = $this->lastName = $this->username = $this->email = $this->gender = "";
             $this->status['loggedIn'] = false;
             $this->cart               = null;
         } else {
-            $this->userID             = $userData['UserID'   ];
             $this->firstName          = $userData['FirstName'];
             $this->lastName           = $userData['LastName' ];
             $this->username           = $userData['Username' ];
+            $this->email              = $userData['Email'    ];
+            $this->gender             = $userData['Gender'   ];
             $this->cart               = new cart();
             $this->status['loggedIn'] = true;
         }
 
+        $this->userID = isset($userData['UserID']) ? $userData['UserID'] : "";
         $this->status['reason'] = "";
     }
 

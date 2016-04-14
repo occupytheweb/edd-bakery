@@ -18,7 +18,8 @@ class authException extends Exception
                                              'password' => "Password Incorrect"
                                             );
         static::$reasons['register'] = array('idTaken'         => "Identifier is taken",
-                                             'passwordNoMatch' => "Passwords do not match"
+                                             'passwordNoMatch' => "Passwords do not match",
+                                             'emailInvalid'    => "Email is invalid"
                                             );
     }
 
@@ -38,7 +39,7 @@ class authException extends Exception
 
 
     public function __toString() {
-        return __CLASS__ . ": [{$this->code}]: " . parent::$message . "\n";
+        return __CLASS__ . ": [{$this->code}]: " . $this->reason . "\n";
     }
 
 
@@ -53,7 +54,7 @@ class auth
 
 
     private function resolve_uid($uid) {
-        $emailPattern = "/^\w+@\w+\.com$/";
+        $emailPattern = "/^\w+@\w+\.\w+$/";
         $type = preg_match($emailPattern, $uid) ? "Email" : "Username";
 
         $this->uid = [
@@ -139,17 +140,35 @@ class auth
 
 
     private function reg__validate_email($email) {
-        $emailPattern = "/^\w+@\w+\.com$/";
+        $emailPattern = "/^\w+@\w+\.\w+$/";
         $status = preg_match($emailPattern, $email);
 
         if(!$status) {
-            throw new authException("register", 1);
+            throw new authException("register-emailInvalid", 5);
         }
+
+        return $status;
     }
 
-    private function reg__save_user(user $thisUser) {
-        if(!$thisUser === null) {
+    private function reg__save_user(user $thisUser, $hash) {
+        if(!($thisUser === null)) {
+            $firstName = $thisUser->firstName;
+            $lastName  = $thisUser->lastName;
+            $username  = $thisUser->username;
+            $email     = $thisUser->email;
+            $gender    = $thisUser->gender;
 
+
+            $this->dbh->set_target("users");
+            $values = "{$firstName} {$lastName} {$username} {$hash} {$email} {$gender}";
+            $this->dbh->push("1 2 3 4 5 6", $values);
+
+            echo $values;
+
+            return true;
+        }
+        else {
+            return false;
         }
     }
 
@@ -162,10 +181,36 @@ class auth
 
     /**
      * Validates a user through its UID
-     * @return bool   $status
-     * TODO::Deprecate - reason : handled by exceptions
+     * @return Array   $status
      */
     public function validate_user() {
+        $exists = null;
+        $status['valid']      = false;
+        try {
+            $exists           = self::get_user_auth_data();
+            $status['valid' ] = true;
+        }
+        catch (authException $err) {
+            $status['reason'] = $err->reason();
+        }
+        finally {
+            return $status;
+        }
+    }
+
+
+    /**
+     * Checks if a given uid is available
+     * @return Bool   $status
+     */
+    public function reg__uid_available() {
+        $exists = self::validate_user();
+        $status = !($exists['valid']);
+        if (!$status) {
+            throw new authException("register-idTaken", 3);
+        }
+
+        return $status;
     }
 
 
@@ -203,17 +248,25 @@ class auth
      * @param string $password
      * @param string $repeatPassword
      */
-    public function register($uid, $passwords, $userData) {
-        $status = true;
+    public function register($uid, $password, $userData) {
+        $user                 = new user(null);
+        $userData['Username'] = $uid;
+
         try {
-            $status = $status && self::reg__validate_passwords($passwords);
-            $status = $status && self::reg__validate_uid($uid);
+            $status = self::reg__uid_available();
+
+            $hash   = password_hash($password, PASSWORD_BCRYPT);
+
+            $user   = new user($userData);
+
+            self::reg__save_user($user, $hash);
         }
         catch (authException $err) {
-            $reason = $err->reason();
+            self::fail_auth( $user, $err->reason() );
         }
-
-
+        finally {
+            return $user;
+        }
     }
 
 

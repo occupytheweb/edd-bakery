@@ -17,7 +17,7 @@ var dom = {
     clear       : function(container) {
         if(container.hasChildNodes()) {
             container.removeChild(container.firstChild);
-            this.clear(container);
+            dom.clear(container);
         }
     },
 
@@ -27,6 +27,39 @@ var dom = {
 
     text_is     : function(element, text) {
         return (element.textContent.trim() === text);
+    }
+}
+
+
+var xml = {
+    tag           : function(root, tag) {
+        return root.getElementsByTagName(tag)[0];
+    },
+
+    tags          : function(root, tag) {
+        return root.getElementsByTagName(tag);
+    },
+
+    tag_text      : function(node, tag) {
+        var node_ = node.getElementsByTagName(tag)[0];
+        var text  = node_.hasChildNodes() ? node_.firstChild.nodeValue : "";
+        return text;
+    },
+
+    text_value    : function(tag) {
+        return tag.hasChildNodes() ? tag.firstChild.nodeValue : "";
+    },
+
+    tag_by_attrib : function(node, tag, attrib, value) {
+        var tags   = node.getElementsByTagName(tag);
+        var match;
+        for (var i = 0; i < tags.length; i++) {
+            if (tags[i].getAttribute(attrib) == value) {
+                match = tags[i];
+                break;
+            }
+        }
+        return match;
     }
 }
 

@@ -63,7 +63,7 @@ ajax.get = function (url, data, callback, responseType) {
     }
     url += query.length ? '?' + query.join('&') : '';
 
-    ajax.send(url, callback, 'GET', null);
+    ajax.send(url, callback, 'GET', null, responseType);
 };
 
 

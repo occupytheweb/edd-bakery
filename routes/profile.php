@@ -40,25 +40,18 @@
         <a class="tab">Profile</a>
         <button type="button">Edit Profile</button>
       </nav>
-      <button id="but1">Message</button><br></br>
-      <div id="msg">
-        <h4>Messing title</h4>
-        <p>Person:  </p><p>Message</p>
-      </div>
-      <button id="but2">Profile</button>
-      <div id="prof">
-        <p>Yo</p>
-      </div>
+
       <ul class="nav-vert">
         <li class="vert-tab">M</li>
         <li class="vert-tab">C</li>
         <li class="vert-tab">P</li>
       </ul>
 
+      <div class="">
+
+      </div>
     </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="./handler.js"></script>
-  <script src="./profile.js"></script>
 </body>
 </html>

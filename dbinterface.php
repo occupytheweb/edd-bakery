@@ -13,13 +13,25 @@ namespace dbinterface {
       ];
 
       private static $data_sources = [
-          "users"       => "edd.users_tbl",
-          "store-cakes" => "edd.store_cakes_tbl",
+          "users"          => "edd.users_tbl",
+          "store-cakes"    => "edd.store_cakes_tbl",
+          "store-cupcakes" => "edd.store_cupcakes_tbl",
+          "store-birthday" => "edd.store_birthdaycakes_tbl",
+          "store-wedding"  => "edd.store_weddingcakes_tbl",
+          "store-pastries" => "edd.store_pastries_tbl",
+          "store-bread"    => "edd.store_bread_tbl",
+          "orders"         => "edd.orders_tbl",
       ];
 
       private static $data_source_fieldset = [
-          "users"       => array("UserID", "FirstName", "LastName", "Username", "Password"),
-          "store-cakes" => array("ID", "Name", "Price", "ImageBasePath", "Details", "ActiveStatus"),
+          "users"          => array("UserID", "FirstName", "LastName", "Username", "Password", "Email", "Gender"            ),
+          "store-cakes"    => array("ID", "Name", "Price", "ImageBasePath", "Details", "ActiveStatus", "Stock"              ),
+          "store-cupcakes" => array("ID", "Name", "Price", "ImageBasePath", "Details", "ActiveStatus", "Stock"              ),
+          "store-birthday" => array("ID", "Name", "Price", "ImageBasePath", "Details", "ActiveStatus", "Stock"              ),
+          "store-wedding"  => array("ID", "Name", "Price", "ImageBasePath", "Details", "ActiveStatus", "Stock"              ),
+          "store-pastries" => array("ID", "Name", "Price", "ImageBasePath", "Details", "ActiveStatus", "Stock"              ),
+          "store-bread"    => array("ID", "Name", "Price", "ImageBasePath", "Details", "ActiveStatus", "Stock"              ),
+          "orders"         => array("ID", "OrderID", "ProductID", "ProductName", "Username", "Quantity", "Price", "SubTotal")
       ];
 
       private $DSN = 'mysql:host=127.0.0.1;dbname=';

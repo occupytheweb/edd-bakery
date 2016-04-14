@@ -8,9 +8,11 @@ $unsafe_un = isset( $_POST['u_n'] ) ? $_POST['u_n'] : false;
 $result = ['valid' => "false"];
 
 if($unsafe_un) {
-  $db_handle = new dbinterface\PDO_handle();
-  
+  $db_handle = new dbinterface\db_handle();
+
+  $exists = 0;
   $record = $db_handle->pull("1 2 3", ['Username' => "$unsafe_un"], $exists);
+
   if(!(empty($record))) {
       $result = [
         'valid' => "true",
@@ -21,5 +23,5 @@ if($unsafe_un) {
       $db_handle = null;
   }
 }
-
+echo "exists: $exists";
 echo json_encode($result);

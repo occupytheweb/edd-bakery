@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EdD Admin</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Admin Dashboard Entry Point" />
+  <meta http-equiv="x-ua-compatible" content="ie=9" />
+  <link rel="stylesheet" type="text/css" href="css/layout.css" />
+  <link rel="stylesheet" type="text/css" href="css/nav.css" />
+  <link rel="stylesheet" type="text/css" href="css/typography.css" />
+  <script type="text/vbscript" src="res/handler.vb"></script>
+</head>
+<body>
+  <nav class="" id="top-menu">
+    <div class="nav-brand">
+	  <span class="hamburger"></span>
+	  <a href="#">EdD :: Dashboard</a>
+	</div>
+	<div class="nav-right" id="user">
+	  <a href="#">
+	    <i class="fa fa-user"></i>
+		<span id="currentUser"> Username </span>
+	  </a>
+	</a>
+	</div>
+  </nav>
+
+  <nav class="sidebar" id="side-menu">
+    <ul class="menu-items">
+	  <li class="">
+	    <a href="#">Dashboard</a>
+	  </li>
+	  <li class="">
+	    <a href="#">POS</a>
+	  </li>
+	  <li class="">
+	    <a href="#">Orders</a>
+	  </li>
+	  <li class="">
+	    <a href="#">Messages</a>
+	  </li>
+	  <li class="">
+	    <a href="#">Databases</a>
+	  </li>
+	  <li class="">
+	    <a href="#">Web Content</a>
+	  </li>
+	</ul>
+  </nav>
+
+  <div class="view">
+<fieldset>
+<legend><strong>Messages</strong></legend>
+<form method="" action="#"> 
+Send to : <br><input type="itmName" name="d_username" placeholder="User Name" size="40"><br><br>
+
+Subject <br><input type="text" name="d_subject" size="40"><br><br>
+
+Message <br><textarea name="d_message" rows="4" cols="50"></textarea><br><br> 
+
+<input id="button" type="submit" name="submit_message" value="Send">
+</form> 
+  </div>
+</body>
+</html>	
